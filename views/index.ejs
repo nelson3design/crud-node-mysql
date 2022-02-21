@@ -1,0 +1,46 @@
+
+
+<form action="">
+    <input type="search" placeholder="search...">
+    <input type="button" value="search">
+</form>
+
+<button>
+
+    <a href="/adicionar">Adicionar</a>
+</button>
+</br>
+<table width="100%"; border="1";>
+    <thead>
+       <tr>
+           <td>Nome</td>
+           <td>Email</td>
+           <td>Idade</td>
+           <td>Telefone</td>
+           <td>acões</td>
+       </tr>
+    </thead>
+
+    <tbody>
+        <% resultado.forEach((user)=>{ %>
+
+            <tr>
+                <td><%= user.id %></td>
+                <td><%= user.nome %></td>
+                <td><%= user.idade %></td>
+                <td><%= user.tel %></td>
+               <td>
+                   <button>
+
+                       <a href="/edit-action/<%= user.id %>">editar</a>
+                   </button>
+                   <button>
+
+                       <a href="/delete-action/<%= user.id %>" onclick=" return confirm('tem certeza de excluir esse usuario?')">excluir</a>
+                   </button>
+               </td>
+            
+            </tr>
+        <%})%>
+    </tbody>
+</table>

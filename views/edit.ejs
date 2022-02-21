@@ -1,0 +1,27 @@
+<% if (user){ %>
+
+    
+
+<form action="/edit-action" method="post">
+    <input type="text" name="id" value="<%= user.id %>" hidden>
+
+    <input type="text" placeholder="nome" name="nome" value="<%= user.nome %>">
+    <br> <br>
+
+    <input type="text" placeholder="email" name="email" value="<%= user.email %>">
+    <br> <br>
+
+    <input type="text" placeholder="idade" name="idade" value="<%= user.idade %>">
+    <br> <br>
+
+    <input type="text" placeholder="telefone" name="tel" value="<%= user.tel %>">
+    <br> <br>
+    <input type="submit" value="adicionar">
+    <button><a href="/">cancelar</a></button>
+
+
+   
+</form>
+
+<% } %>
+
